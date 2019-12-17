@@ -1,0 +1,19 @@
+
+call plug#begin('~/.config/nvim/bundle')
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/syntastic'
+Plug 'tpope/vim-surround'
+Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'google/vim-maktaba'
+Plug 'google/vim-codefmt'
+Plug 'google/vim-glaive'
+Plug 'tpope/vim-fugitive'                                                               
+Plug 'ctrlpvim/ctrlp.vim'                                                               
+Plug 'dyng/ctrlsf.vim'
+Plug 'micha/vim-colors-solarized'
+call plug#end()
+
+
