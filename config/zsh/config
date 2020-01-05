@@ -1,0 +1,8 @@
+alias vim="nvim"
+alias vi="nvim"
+alias python="/usr/local/bin/python3"
+alias pip="/usr/local/bin/pip3"
+
+autoload -U compinit && compinit
+zmodload -i zsh/complist
+
