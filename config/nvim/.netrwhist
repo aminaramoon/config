@@ -1,5 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/home/aaramoon/Workspace/nash/edgect/top-level/rsc/src/cpp/include/yee_model/container'
-let g:netrw_dirhist_2='/home/aaramoon/Workspace/nash/edgect/top-level/rsc/src/cpp/include/yee_model/types'
-let g:netrw_dirhist_3='/home/aaramoon/Workspace/nash/edgect/top-level/rsc/src/cpp/include/models'
