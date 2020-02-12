@@ -17,5 +17,6 @@ Plug 'majutsushi/tagbar'
 Plug 'jiangmiao/auto-pairs'
 Plug 'CoatiSoftware/vim-sourcetrail'
 Plug 'junegunn/goyo.vim'
+Plug 'dense-analysis/ale'
 call plug#end()
 
