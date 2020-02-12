@@ -3,7 +3,7 @@ let g:airline#extensions#tabline#enabled=1  " buffers at the top as tabs
 " let g:airline#extensions#tabline#show_tabs=0
 let g:airline#extensions#tabline#show_tab_type=0
 let g:airline#extensions#tmuxline#enabled=0
-let g:airline_theme = 'base16_pop'
+" let g:airline_theme = 'base16_pop'
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
