@@ -9,3 +9,11 @@ nnoremap <Leader>z :Goyo<CR>
 
 nnoremap <Leader>b :NERDTreeToggle<CR>
 
+nnoremap <Leader>si :FormatCode<CR>
+
+nnoremap <F2> :ALERename<CR>
+nnoremap <Leader>gd :ALEGoToDefinition<CR>
+nnoremap <Leader>gvd :ALEGoToDefinitionInVSplit<CR>
+nnoremap <Leader>gsd :ALEGoToDefinitionInSplit<CR>
+
+
