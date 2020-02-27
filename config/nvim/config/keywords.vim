@@ -7,5 +7,5 @@ nnoremap <F12> :tn<CR>
 
 nnoremap <Leader>z :Goyo<CR>
 
-nnoremap <C-b> :NERDTreeToggle<CR>
+nnoremap <Leader>b :NERDTreeToggle<CR>
 
