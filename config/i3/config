@@ -10,6 +10,9 @@ font pango:Fira Code 8
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# setting the wallpaper
+exec --no-startup-id feh --bg-scale $HOME/Pictures/wallpapers/pixel_drop.jpg
+
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
@@ -191,10 +194,9 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
     status_command $HOME/.local/bin/bumblebee-status -m date time battery amixer weather bluetooth indicator -t iceberg
-	font pango:Fira Code 12
+	font pango:Inconsolata 12
 	separator_symbol "|"
-	tray_output $left_monitor
-	tray_output $builtin_monitor
+	# tray_output $left_monitor
 	workspace_buttons yes
 	strip_workspace_numbers no
 	position top

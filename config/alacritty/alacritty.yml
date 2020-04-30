@@ -95,7 +95,7 @@ font:
 
   bold:
     family: Fira Code
-    style: Bold
+    style: SemiBold 
 
   italic:
     family: Fira Code
