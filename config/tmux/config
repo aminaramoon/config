@@ -17,3 +17,6 @@ bind -n M-Down select-pane -D
 
 # Enable mouse mode (tmux 2.1 and above)
 set -g mouse on
+
+# Enable 256 coloring for tmux
+set -g default-terminal "screen-256color"

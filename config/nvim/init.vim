@@ -21,6 +21,8 @@ syntax on
 set nocompatible
 set guifont=Monaco\ Regular:h20
 
+if !exists('g:vscode') 
+
 source $HOME/.config/nvim/config/setup.vim
 source $HOME/.config/nvim/config/bundles.vim
 source $HOME/.config/nvim/config/nerd_tree.vim
@@ -33,3 +35,4 @@ source $HOME/.config/nvim/config/keywords.vim
 set background=dark
 colorscheme tender
 
+endif
