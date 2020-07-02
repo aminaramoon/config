@@ -17,6 +17,9 @@ exec --no-startup-id feh --bg-scale $HOME/Pictures/wallpapers/pixel_drop.jpg
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
+set $left_monitor HDMI-0
+set $right_monitor DP-1
+
 # start-ups applets and services
 # exec --no-startup-id albert # keyboard launcher
 exec --no-startup-id nm-applet # network manager applet
@@ -28,8 +31,8 @@ exec --no-startup-id flameshot  # screenshot applet
 # Use pactl to adjust volume in PulseAudio.
 # set $refresh_i3status killall -SIGUSR1 i3status
 # Update volume indicator in i3_status run them wih "&& $refresh_i3status"
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10%
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +3%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -3%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
@@ -207,10 +210,12 @@ for_window [ class="Enpass" instance="Enpass" ] floating enable
 for_window [ window_role="pop-up" ] floating enable
 for_window [ class="Pavucontrol" ] floating enable borders none
 
-assign [ class="Google-chrome" window_role="browser" ] 4
-assign [ class="Google-chrome" window_role="pop-up" ] 6
-assign [class="Android Messages"] 6
-assign [class="Google Play Music Desktop Player"] 7
+# assign [ class="Google-chrome" window_role="browser" ] 4
+# assign [ class="Google-chrome" window_role="pop-up" ] 6
+assign [class="youtube-music-desktop-app"] 7
 assign [class="Spotify"] 7
-assign [class="Simplenote"] 5
+assign [class="Slack"] 5
+assign [class="whatsdesk"] 5
+assign [class="Android Messages"] 5
+assign [class="Simplenote"] 6
 

@@ -1,5 +1,6 @@
 
 call plug#begin('~/.config/nvim/bundle')
+Plug 'jremmen/vim-ripgrep'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/syntastic'
