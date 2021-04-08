@@ -34,8 +34,8 @@ window:
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
   padding:
-    x: 1
-    y: 0
+    x: 2
+    y: 2
 
   # Spread additional padding evenly around the terminal content.
   #dynamic_padding: false
@@ -90,15 +90,15 @@ window:
 # Font configuration
 font:
   normal:
-    family: Fira Code
+    family: Cascadia Code
     style: Regular
 
   bold:
-    family: Fira Code
+    family: Cascadia Code
     style: SemiBold
 
   italic:
-    family: Fira Code
+    family: Cascadia Code
     style: Italic
 
   bold_italic:
@@ -106,7 +106,7 @@ font:
     style: SemiBold
 
   # Point size
-  size: 11.0
+  size: 12.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -117,9 +117,9 @@ font:
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increasing `x` moves the glyph to the right,
   # increasing `y` moves the glyph upwards.
-  # glyph_offset:
-    # x: 0
-    # y: 0
+  glyph_offset:
+    x: 0
+    y: 0
 
   # Thin stroke font rendering (macOS only)
   #
@@ -235,14 +235,14 @@ colors: *dark
 # Allow terminal applications to change Alacritty's window title.
 #dynamic_title: true
 
-#cursor:
   # Cursor style
   #
   # Values for `style`:
   #   - ▇ Block
   #   - _ Underline
   #   - | Beam
-  #style: Block
+cursor:
+  style: Block
 
   # Vi mode cursor style
   #

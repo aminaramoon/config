@@ -19,11 +19,13 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 set $left_monitor HDMI-0
 set $right_monitor DP-1
+exec --no-startup-id xrandr --output DP-1 --rotate left
 
 # start-ups applets and services
 # exec --no-startup-id albert # keyboard launcher
 exec --no-startup-id nm-applet # network manager applet
 exec --no-startup-id /opt/enpass/Enpass  # password manager
+exec --no-startup-id slack  # slack
 exec --no-startup-id blueman-applet  # bluetooth applet
 exec --no-startup-id flameshot  # screenshot applet
 
