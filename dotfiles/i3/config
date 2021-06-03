@@ -4,6 +4,10 @@ set $mod Mod4
 # setting background color to black
 exec --no-startup-id xsetroot -solid "#000000"
 
+gaps inner 5
+smart_borders on
+smart_borders no_gaps
+
 # Font for window titles.
 font pango:Fira Code 8
 
@@ -11,14 +15,14 @@ font pango:Fira Code 8
 floating_modifier $mod
 
 # setting the wallpaper
-exec --no-startup-id feh --bg-scale $HOME/Pictures/wallpapers/pixel_drop.jpg
+exec --no-startup-id feh --bg-scale $HOME/Pictures/wallpapers/color.jpg
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 set $left_monitor HDMI-0
-set $right_monitor DP-1
+set $right_monitor DP-1-1
 exec --no-startup-id xrandr --output DP-1 --rotate left
 
 # start-ups applets and services
@@ -193,6 +197,10 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
+client.focused_inactive #0d1010 #212121 #d9d9d9 #0d1010 #063340
+client.unfocused        #0d1010 #212121 #d9d9d9 #424242 #063340
+client.focused          #d9d9d9 #cecece #000000 #d9d9d9 #d9d9d9
+
 bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -207,13 +215,15 @@ bar {
 	position top
 }
 
+# must be here for i3-gap to work
+for_window [class=".*"] border pixel 2
 for_window [ class="Nm-connection-editor" instance="nm-connection-editor" ] floating enable
 for_window [ class="Enpass" instance="Enpass" ] floating enable
 for_window [ window_role="pop-up" ] floating enable
 for_window [ class="Pavucontrol" ] floating enable borders none
 
-# assign [ class="Google-chrome" window_role="browser" ] 4
-# assign [ class="Google-chrome" window_role="pop-up" ] 6
+assign [ class="Google-chrome" window_role="browser" ] 4
+assign [ class="Vivaldi-stable" window_role="browser" ] 3
 assign [class="youtube-music-desktop-app"] 7
 assign [class="Spotify"] 7
 assign [class="Slack"] 5
