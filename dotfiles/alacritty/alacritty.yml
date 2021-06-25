@@ -90,19 +90,19 @@ window:
 # Font configuration
 font:
   normal:
-    family: Cascadia Code
+    # family: Cascadia Code
     style: Regular
 
   bold:
-    family: Cascadia Code
+    # family: Cascadia Code
     style: SemiBold
 
   italic:
-    family: Cascadia Code
+    # family: Cascadia Code
     style: Italic
 
   bold_italic:
-    family: Fira Code
+    # family: Cascadia Code
     style: SemiBold
 
   # Point size
