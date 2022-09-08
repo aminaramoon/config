@@ -1,5 +1,5 @@
 [user]
-	email = amin.aramoon@gmail.com
+	email = amin.aramoon@gmail.ai
 	name = Amin Aramoon
 
 [alias]
@@ -18,19 +18,27 @@
 
 [core]
 	editor = nvim
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true  # use n and N to move between diff sections
+    features = side-by-side line-numbers decorations
+    whitespace-error-style = 22 reverse
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
 
 [pager]
     diff = delta
     log = delta
     reflog = delta
     show = delta
-
-[interactive]
-    diffFilter = delta --color-only
-
-[delta]
-    features = side-by-side line-numbers decorations
-    whitespace-error-style = 22 reverse
 
 [delta "decorations"]
     commit-decoration-style = bold yellow box ul
