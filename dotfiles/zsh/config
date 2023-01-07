@@ -51,7 +51,7 @@ HISTFILE="$HOME/.cache/zsh/history"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git fzf history zsh-autosuggestions zsh-syntax-highlighting bazel ssh-agent command-not-found)
+plugins=(git fzf history zsh-autosuggestions zsh-syntax-highlighting ssh-agent command-not-found)
 
 source $ZSH/oh-my-zsh.sh
 
