@@ -4,9 +4,9 @@ set $mod Mod4
 # setting background color to black
 exec --no-startup-id xsetroot -solid "#000000"
 
-gaps inner 5
-smart_borders on
-smart_borders no_gaps
+# gaps inner 5
+# smart_borders on
+# smart_borders no_gaps
 
 # Font for window titles.
 font pango:Fira Code 8
@@ -15,15 +15,19 @@ font pango:Fira Code 8
 floating_modifier $mod
 
 # setting the wallpaper
-exec --no-startup-id feh --bg-scale $HOME/Pictures/wallpapers/color.jpg
+#exec --no-startup-id feh --bg-scale $HOME/Pictures/wallpaper.jpg
+#exec --no-startup-id xsetroot -solid "#333333"
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
-set $left_monitor HDMI-0
-set $right_monitor DP-1-1
-exec --no-startup-id xrandr --output DP-1 --rotate left
+set $left_monitor e-DP-1-l
+set $center_monitor e-DP-1-c
+set $right_monitor e-DP-1-r
+
+# set ultrawide monitor to three screens
+exec_always --no-startup-id /usr/bin/bash $HOME/.config/i3/launch.sh
 
 # start-ups applets and services
 # exec --no-startup-id albert # keyboard launcher
@@ -64,7 +68,7 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+q kill
 
 # start (a program launcher)
-bindsym $mod+d exec ulauncher
+bindsym $mod+d exec rofi -show drun 
 
 # change focus
 bindsym $mod+j focus left
@@ -161,12 +165,10 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # switch to workspace
 workspace 1 output $left_monitor
-workspace 2 output $left_monitor
-workspace 3 output $left_monitor
-workspace 4 output $right_monitor
+workspace 2 output $center_monitor
+workspace 3 output $center_monitor
+workspace 4 output $center_monitor
 workspace 5 output $right_monitor
-workspace 6 output $right_monitor
-workspace 7 output $right_monitor
 
 
 # bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
@@ -205,15 +207,15 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-    status_command $HOME/.local/bin/bumblebee-status -m date time battery pasource pasink indicator -t iceberg
-	font pango:Inconsolata 12
-	separator_symbol "|"
-	tray_output $left_monitor
-	workspace_buttons yes
-	strip_workspace_numbers no
-	position top
-}
+#bar {
+    #status_command $HOME/.local/bin/bumblebee-status -m date time battery pasource pasink indicator -t iceberg
+	#font pango:Inconsolata 12
+	#separator_symbol "|"
+	#tray_output $center_monitor
+	#workspace_buttons yes
+	#strip_workspace_numbers no
+	#position top
+#}
 
 # must be here for i3-gap to work
 for_window [ class=".*" ] border pixel 2
@@ -223,11 +225,5 @@ for_window [ window_role="pop-up" ] floating enable
 for_window [ class="Pavucontrol" ] floating enable borders none
 
 assign [ class="Google-chrome" window_role="browser" ] 4
-assign [ class="Vivaldi-stable" window_role="browser" ] 3
-assign [class="youtube-music-desktop-app"] 7
-assign [class="Spotify"] 7
 assign [class="Slack"] 5
-assign [class="whatsdesk"] 5
-assign [class="Android Messages"] 5
-assign [class="Simplenote"] 6
 
