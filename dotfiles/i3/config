@@ -21,6 +21,7 @@ exec --no-startup-id nitrogen --restore
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id numlockx on
 
 set $left_monitor e-DP-1-l
 set $center_monitor e-DP-1-c
@@ -174,9 +175,6 @@ workspace 4 output $center_monitor
 workspace 5 output $right_monitor
 
 
-# bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
-# bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
-
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -227,6 +225,8 @@ for_window [ class="Enpass" instance="Enpass" ] floating enable
 for_window [ window_role="pop-up" ] floating enable
 for_window [ class="Pavucontrol" ] floating enable borders none
 
-assign [ class="Google-chrome" window_role="browser" ] 1
-assign [class="Slack"] 5
+assign [ class="Brave-browser" window_role="browser" ] 1
+assign [ class="Google-chrome" window_role="browser" ] 3
+assign [ class="Sourcetrail" ] 4
+assign [ class="Slack" ] 5
 
