@@ -90,22 +90,20 @@ window:
 # Font configuration
 font:
   normal:
-    family: JetBrains Mono
-    style: Regular
+   family: JetBrainsMonoNerdFontMono
+   style: Regular
 
   bold:
-    family: SF Mono
-    style: SemiBold
+   family: JetBrainsMonoNerdFontMono
+   style: SemiBold
 
   italic:
-    # family: Cascadia Code
-    family: SF Mono
-    style: Italic
+   family: JetBrainsMonoNerdFontMono
+   style: Italic
 
   bold_italic:
-    # family: Cascadia Code
-    family: SF Mono
-    style: SemiBold
+   family: JetBrainsMonoNerdFontMono
+   style: Bold Italic
 
   # Point size
   size: 16.0
